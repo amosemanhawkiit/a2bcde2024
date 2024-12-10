@@ -3,39 +3,51 @@
     <header>
       <nav>
         <ul class="menu">
-          <li><a href="#" @click.prevent="currentPage = 'BartPage'">BartPage</a></li>
-          <li><a href="#" @click.prevent="currentPage = 'CarriePage'">CarriePage</a></li>
-          <li><a href="#" @click.prevent="currentPage = 'Abigal'">AbigailPage</a></li>
-          <li><a href="#" @click.prevent="currentPage = 'AmeliaPage'">AmeliaPage</a></li>
+          <li><a href="#" @click.prevent="currentPage = 'Moseman'">Moseman</a></li>
+          <li><a href="#" @click.prevent="currentPage = 'B'">B</a></li>
+          <li><a href="#" @click.prevent="currentPage = 'C'">C</a></li>
+          <li><a href="#" @click.prevent="currentPage = 'A'">A</a></li>
+          <li><a href="#" @click.prevent="currentPage = 'A2'">A2</a></li>
+          <li><a href="#" @click.prevent="currentPage = 'D'">D</a></li>
+          <li><a href="#" @click.prevent="currentPage = 'E'">E</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <BartPage v-if="currentPage === 'BartPage'" />
-      <CarriePage v-if="currentPage === 'CarriePage'" />
-      <AbigailPage v-if="currentPage === 'AbigailPage'" />
-      <AmeliaPage v-if="currentPage === 'AmeliaPage'" />
+      <HomeBase v-if="currentPage === 'Moseman'" />
+      <BartPage v-if="currentPage === 'B'" />
+      <CarriePage v-if="currentPage === 'C'" />
+      <AbigailPage v-if="currentPage === 'A'" />
+      <AmeliaPage v-if="currentPage === 'A2'" />
+      <DrewPage v-if="currentPage === 'D'" />
+      <EliPage v-if="currentPage === 'E'" />
     </main>
   </div>
 </template>
 
 <script>
+import HomeBase from './components/HomeBase.vue';
 import BartPage from './components/BartPage.vue';
 import CarriePage from './components/CarriePage.vue';
 import AbigailPage from './components/AbigailPage.vue';
 import AmeliaPage from './components/AmeliaPage.vue';
+import DrewPage from './components/DrewPage.vue';
+import EliPage from './components/EliPage.vue';
 
 export default {
   data() {
     return {
-      currentPage: 'BartPage', // Default page
+      currentPage: 'Moseman', // Default page
     };
   },
   components: {
+    HomeBase,
     BartPage,
     CarriePage,
     AbigailPage,
-    AmeliaPage
+    AmeliaPage,
+    DrewPage,
+    EliPage
   }
 };
 </script>
