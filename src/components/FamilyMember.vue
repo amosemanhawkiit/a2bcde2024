@@ -42,14 +42,14 @@
   
   .family-member-page h1 {
     font-size: 2rem;
-    color: #4e9e3d;
+    color: #e7d7c1;
   }
   
   .profile-img img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 5px solid #004aad;
+    border: 5px solid #bf4342;
     margin-top: 20px;
   }
   
