@@ -1,38 +1,32 @@
 <template>
-  <div class="flex flex-col md:flex-row items-center justify-between min-h-screen bg-grey-100 p-8">
+  <div class="flex flex-col md:flex-row min-h-screen bg-grey-100 p-8">
     <!-- Left Section: Large Text -->
     <div class="md:w-1/2 p-8">
       <h1 class="text-[11rem] font-bold text-dgreen leading-[0.75]">
         Moseman <br> Family <br>
         E-Zine
       </h1>
-      <p class="text-lg text-lgreen mt-4">
+      <p class="text-lg flex items-end text-lgreen mt-4">
         in order to stay on top of the digital wave, we have digitized this year's Chrismas 'zine.
       </p>
-      <p class="italic text-lg text-lgreen mt-4">
+      <p class="italic flex items-end text-lg text-lgreen mt-4">
           to navigate through the website and take a look at what we've been up to, either swipe through each 'page' or use the navigation menu
         </p> 
     </div>
 
     <!-- Right Section: Slideshow -->
-    <div class="md:w-1/2">
+    <div class="md:w-1/2 flex items-end justify-center me-10">
       <div class="slideshow-container relative">
         <img
           :src="images[currentImage]"
-          class="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
+          class="w-full h-64 md:h-96 object-cover rounded-sm shadow-lg"
         />
-        <!-- Navigation Buttons -->
+        <!-- Pause Button, NEED TO FIX ICONS-->
         <button
-          class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 shadow"
-          @click="prevImage"
+          class="absolute bottom-4 right-4 bg-gray-800 text-white rounded-full p-2 shadow"
+          @click=!isPaused
         >
-          &#10094;
-        </button>
-        <button
-          class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 shadow"
-          @click="nextImage"
-        >
-          &#10095;
+        {{ isPaused ? 'Play' : 'Pause' }}
         </button>
       </div>
     </div>
@@ -45,20 +39,27 @@ export default {
     return {
       currentImage: 0,
       images: [
-        "/FamilyHuddle.jpg",
-        "/path-to-image2.jpg",
-        "/path-to-image3.jpg",
+        "/assetspub/FamilyHuddle.jpg",
+        // "/path-to-image2.jpg",
+        // "/path-to-image3.jpg",
       ],
+      isPaused: false,
+      intervalId: null,
     };
   },
+  mounted(){
+    this.start();
+  },
   methods: {
-    nextImage() {
-      this.currentImage =
-        (this.currentImage + 1) % this.images.length;
+    start(){
+      this.intervalID = setInterval(()=> {
+        if (!this.isPaused) {
+          this.next();
+        }
+      }, 3000)
     },
-    prevImage() {
-      this.currentImage =
-        (this.currentImage - 1 + this.images.length) % this.images.length;
+    next(){
+      this.currentImage = (this.currentImage + 1) % this.images.length;
     },
   },
 };
@@ -67,7 +68,7 @@ export default {
 <style scoped>
 /* Add any additional styling here */
 .slideshow-container {
-  /* position: relative; */
+  position: relative;
   max-width: 100%;
 }
 </style>

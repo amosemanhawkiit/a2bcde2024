@@ -8,20 +8,21 @@
     </svg>
     </button>
       <div 
-      class="space-y-10 fixed top-0 right-0 h-dvh w-screen p-4 inline-block items-center justify-center bg-dred text-almond"
+      class="space-y-10 fixed top-0 right-0 z-50 h-dvh w-1/3 p-4 inline-block items-center justify-center bg-dred text-almond"
       v-if="isSidebarOpen">
         <ul class="space-y-10 text-center text-2xl">
-            <li><a href="#" @click.prevent="currentPage = 'Moseman'; showSideNav = false" class="hover:text-bittersweet">Moseman</a></li>
             <li><a href="#" @click.prevent="currentPage = 'A'; showSideNav = false" class="hover:text-bittersweet">A</a></li>
             <li><a href="#" @click.prevent="currentPage = 'A2'; showSideNav = false" class="hover:text-bittersweet">A2</a></li>
             <li><a href="#" @click.prevent="currentPage = 'B'; showSideNav = false" class="hover:text-bittersweet">B</a></li>
             <li><a href="#" @click.prevent="currentPage = 'C'; showSideNav = false" class="hover:text-bittersweet">C</a></li>
             <li><a href="#" @click.prevent="currentPage = 'D'; showSideNav = false" class="hover:text-bittersweet">D</a></li>
             <li><a href="#" @click.prevent="currentPage = 'E'; showSideNav = false" class="hover:text-bittersweet">E</a></li>
+            <li><a href="#" @click.prevent="currentPage = 'Moseman'; showSideNav = false" class="hover:text-bittersweet">Moseman</a></li>
           </ul>
-          <button 
-          class="p-2 text-almond bg-bittersweet justify-center rounded-md mb-4 focus:outline-none" @click="showSideNav = false">Close</button> 
+          <!-- <button 
+          class="p-2 text-almond bg-bittersweet justify-center rounded-md mb-4 focus:outline-none" @click="showSideNav = false">Close</button>  -->
       </div>
+      
       </nav>
     <main>
       <HomeBase v-if="currentPage === 'Moseman'" />
@@ -48,7 +49,7 @@ export default {
   data() {
     return {
       currentPage: 'Moseman', 
-      isSidebarOpen: false,// Default page
+      isSidebarOpen: false,
     };
   },
   components: {
