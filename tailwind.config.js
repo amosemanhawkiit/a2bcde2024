@@ -10,6 +10,11 @@ module.exports = {
         'dred': '#8c1c13',
         'bittersweet': '#bf4342'
       },
+      fontFamily:{
+        sans: ['Roboto', 'Arial', 'sans-serif'], 
+        serif: ['Georgia', 'serif'],
+        mono: ['Courier New', 'monospace'],
+      }
   },
   },
   plugins: [],

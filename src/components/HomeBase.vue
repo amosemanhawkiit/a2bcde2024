@@ -1,32 +1,39 @@
 <template>
-  <div class="flex flex-col md:flex-row min-h-screen bg-grey-100 p-8">
-    <!-- Left Section: Large Text -->
-    <div class="md:w-1/2 p-8">
-      <h1 class="text-[11rem] font-bold text-dgreen leading-[0.75]">
-        Moseman <br> Family <br>
+  <div class="grid grid-cols-1 md:grid-rows-1 md:grid-cols-2 w-screen bg-grey-100 items-start">
+    <!-- Large Text (1,1) and (1,2) -->
+    <div class="row-start-1 row-end-2 col-span-1 flex flex-col ">
+      <h1 class="text-6xl leading-none md:text-6xl lg:text-[11rem] font-extrabold text-dgreen  transition-all duration-500">
+        Moseman
+      </h1>
+      <h1 class="text-6xl leading-none md:text-6xl lg:text-[11rem] font-extrabold text-dgreen  transition-all duration-500 indent-6 lg:indent-0">
+        Family 
+      </h1>
+      <h1 class="text-6xl leading-none md:text-6xl lg:text-[11rem] text-nowrap font-extrabold text-dgreen  transition-all duration-500 indent-12 lg:indent-0">
         E-Zine
       </h1>
-      <p class="text-lg flex items-end text-lgreen mt-4">
-        in order to stay on top of the digital wave, we have digitized this year's Chrismas 'zine.
+      <p class="text-lg italic text-lgreen mt-4 font-mono">
+        to stay on top of the digital wave, we digitized this year's christmas 'zine.
+        <br>
+        swipe on through, page by page, for what we've done and what we've seen 
       </p>
-      <p class="italic flex items-end text-lg text-lgreen mt-4">
-          to navigate through the website and take a look at what we've been up to, either swipe through each 'page' or use the navigation menu
-        </p> 
+      <p class="text-xl text-lgreen mt-4 font-mono">
+        happy holidays! 
+      </p>
     </div>
 
-    <!-- Right Section: Slideshow -->
-    <div class="md:w-1/2 flex items-end justify-center me-10">
-      <div class="slideshow-container relative">
+    <!-- Slideshow (1,3) -->
+    <div class="row-start-2 row-end-2 md:row-start-1 md:col-start-2 md:col-end-3 flex items-start justify-center md:relative">
+      <div class="relative w-full h-auto" >
         <img
           :src="images[currentImage]"
-          class="w-full h-64 md:h-96 object-cover rounded-sm shadow-lg"
+          class="w-full h-auto md:h-96 object-cover rounded-sm shadow-lg"
         />
-        <!-- Pause Button, NEED TO FIX ICONS-->
+        <!-- Pause Button -->
         <button
           class="absolute bottom-4 right-4 bg-gray-800 text-white rounded-full p-2 shadow"
-          @click=!isPaused
+          @click="isPaused = !isPaused"
         >
-        {{ isPaused ? 'Play' : 'Pause' }}
+          {{ isPaused ? 'Play' : 'Pause' }}
         </button>
       </div>
     </div>
@@ -44,7 +51,7 @@ export default {
         // "/path-to-image3.jpg",
       ],
       isPaused: false,
-      intervalId: null,
+      intervalID: null,
     };
   },
   mounted(){
@@ -67,8 +74,5 @@ export default {
 
 <style scoped>
 /* Add any additional styling here */
-.slideshow-container {
-  position: relative;
-  max-width: 100%;
-}
+
 </style>
