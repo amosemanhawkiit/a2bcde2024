@@ -8,7 +8,7 @@ module.exports = defineConfig({
     experiments: {
       outputModule: true, // Enables Webpack support for ES Modules
     },},
-    compilerOptions: {
-      isCustomElement: (tag) => tag.startsWith('swiper-'),
-    },
+    // compilerOptions: {
+    //   isCustomElement: (tag) => tag.startsWith('swiper-'),
+    // },
 })

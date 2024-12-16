@@ -14,8 +14,9 @@
       return {
         abigail: {
           name: 'Abigail',
-          image: require('@/assets/logo.png'), // Replace with actual image
+          collage: require('@/assets/logo.png'), // Replace with actual image
           bio: 'Abigail is the youngest member of the family, full of energy and curiosity. She loves Christmas because of all the decorations and holiday treats!',
+          question1: 'What are you up to?',
           favoriteTradition: 'Decorating the Christmas tree with Mom and Dad.',
           favoriteActivity: 'Baking cookies with Grandma.',
           holidayWish: 'I wish for snow on Christmas Day!',

@@ -38,7 +38,7 @@
       <DrewPage v-if="currentPage === 'D'" />
       <EliPage v-if="currentPage === 'E'" />
     </main> -->
-    <div class="min-h-screen bg-gray-100">
+    <div class="min-h-screen bg-gray-100 perspective-1000">
       <swiper-container
         ref="swiper"
         slides-per-view="1"
@@ -46,14 +46,13 @@
         pagination=false
         :navigation= false
         effect="coverflow"
-        :scrollbar="{ draggable: true }"
         class="h-screen"
       >
         <!-- Dynamically Render Pages using swiper-slide class from swiper-element -->
         <swiper-slide 
           v-for="(page, index) in pages" 
           :key="index">
-          <div class="h-full p-8 flex justify-center bg-gray-50 overflow-y-auto -webkit-overflow-scrolling max-height-100vh ">
+          <div class="perspective-1000 h-full p-8 flex justify-center bg-gray-50 overflow-y-auto -webkit-overflow-scrolling max-height-100vh ">
             <component
               v-if="page"
               :is="page"
