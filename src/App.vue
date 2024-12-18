@@ -8,9 +8,9 @@
     </svg>
     </button>
       <div 
-      class="space-y-10 fixed top-0 right-0 z-50 h-screen w-1/3 p-4 flex flex-col items-center justify-center bg-dred text-almond sm:w-full"
+      class="space-y-10 fixed top-0 right-0 z-50 h-screen w-full p-4 flex flex-col items-center justify-center bg-dred text-almond md:w-1/3"
       v-if="isSidebarOpen">
-        <ul class="space-y-10 items-center text-center text-2xl">
+        <ul class="space-y-10 items-center text-center text-4xl font-mono">
             <li><a href="#" @click.prevent="currentPage = 'A'; showSideNav = false" class="hover:text-bittersweet">A</a></li>
             <li><a href="#" @click.prevent="currentPage = 'A2'; showSideNav = false" class="hover:text-bittersweet">A2</a></li>
             <li><a href="#" @click.prevent="currentPage = 'B'; showSideNav = false" class="hover:text-bittersweet">B</a></li>
@@ -29,7 +29,7 @@
           class="p-2 text-almond bg-bittersweet justify-center rounded-md mb-4 focus:outline-none" @click="showSideNav = false">Close</button>  -->
       </div>
       </nav>
-    <!-- <main>
+    <main>
       <HomeBase v-if="currentPage === 'Moseman'" />
       <BartPage v-if="currentPage === 'B'" />
       <CarriePage v-if="currentPage === 'C'" />
@@ -37,26 +37,29 @@
       <AmeliaPage v-if="currentPage === 'A2'" />
       <DrewPage v-if="currentPage === 'D'" />
       <EliPage v-if="currentPage === 'E'" />
-    </main> -->
-    <div class="min-h-screen bg-gray-100 perspective-1000">
+    </main>
+    <div class="min-h-screen bg-gray-100 perspective-1000 overflow-y-auto">
       <swiper-container
         ref="swiper"
         slides-per-view="1"
         space-between="10"
-        pagination=false
+        :scrollbar= "{draggable: true, sticky: true }"
         :navigation= false
-        effect="coverflow"
+        :keyboard="{
+          enabled: true,
+        }"
+        effect="cards"
         class="h-screen"
       >
         <!-- Dynamically Render Pages using swiper-slide class from swiper-element -->
         <swiper-slide 
           v-for="(page, index) in pages" 
           :key="index">
-          <div class="perspective-1000 h-full p-8 flex justify-center bg-gray-50 overflow-y-auto -webkit-overflow-scrolling max-height-100vh ">
+          <div class="perspective-1000 h-full px-0 py-4 p-0 flex justify-center bg-gray-50  -webkit-overflow-scrolling max-height-100vh ">
             <component
               v-if="page"
               :is="page"
-              class="w-full p-8"
+              class="w-full p-0"
             />
             <div v-else class="text-red-500">Invalid Component</div>
           </div>
@@ -118,21 +121,5 @@ export default {
 </script>
 
 <style scoped>
-/* Custom styles for swiper elements */
-.swiper-container {
-  overflow-y: auto; /* Allows vertical scrolling */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
-  max-height: 100vh; 
-}
 
-/* Style for each slide */
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0; /* Light background for each slide */
-  font-size: 18px;
-  color: #333;
- 
-}
 </style>
