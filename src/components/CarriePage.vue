@@ -13,7 +13,7 @@
     data() {
       return {
         abigail: {
-          name: 'Bart/Dad',
+          name: 'carrie/mom',
           image: require('@/assets/logo.png'), // Replace with actual image
           bio: 'Abigail is the youngest member of the family, full of energy and curiosity. She loves Christmas because of all the decorations and holiday treats!',
           favoriteTradition: 'Decorating the Christmas tree with Mom and Dad.',

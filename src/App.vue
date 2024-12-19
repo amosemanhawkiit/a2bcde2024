@@ -55,7 +55,7 @@
         <swiper-slide 
           v-for="(page, index) in pages" 
           :key="index">
-          <div class="perspective-1000 h-full px-0 py-4 p-0 flex justify-center bg-gray-50  -webkit-overflow-scrolling max-height-100vh ">
+          <div class="perspective-1000 h-full px-0 py-4  flex justify-center bg-gray-50 overflow-y-auto max-height-100vh ">
             <component
               v-if="page"
               :is="page"
