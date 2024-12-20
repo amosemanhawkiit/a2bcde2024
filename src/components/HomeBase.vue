@@ -40,6 +40,10 @@
         </button> -->
       </div>
     </div>
+    <!-- Footer -->
+     <div class="flex justify-center ">
+      <p class="font-mono text-dgreen "> <i>swipe to navigate! </i></p>
+     </div>
   </div>
 </template>
 

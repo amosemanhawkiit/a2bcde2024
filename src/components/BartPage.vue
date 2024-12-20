@@ -1,7 +1,7 @@
 <template>
   <FamilyMember :member="bart">
     <template #header>
-      <h1 class="custom-header-class font-mono text-8xl text-center bg-dred text-almond">{{ bart.name }}</h1>
+      <h1 class="custom-header-class font-mono text-6xl text-center bg-dred text-almond">{{ bart.name }}</h1>
     </template>
   </FamilyMember>
 </template>
@@ -17,30 +17,30 @@ export default {
   data() {
     return {
       bart: {
-          name: 'bart',
+          name: 'bart/dad',
           pageColor: 'dred',
-          pfp: "/assetspub/track.jpg",
+          pfp: "/assetspub/dadeligolf.jpg",
           collageImages: [
-          { src: "/assetspub/track.jpg", alt: "Bart at a game" },
-          { src: "/assetspub/track.jpg", alt: "Bart with the kids" },
-          { src: "/assetspub/track.jpg", alt: "Bart baking" },
+          { src: "/assetspub/dadquinn.jpg", alt: "Bart making a funny expression" },
+          { src: "/assetspub/dadeligolf.jpg", alt: "Bart with the kids" },
+          { src: "/assetspub/urkillingmesmalls.jpg", alt: "Bart baking" },
           ], 
-          bio: 'Abigail is the youngest member of the family, full of energy and curiosity. She loves Christmas because of all the decorations and holiday treats!',
+          bio: 'Bart spent much of his year ruminating and wondering about the future, as one does when they\'re 50+. With four children facing changes in career paths, sports, education, etc., there\'s plenty to envision aside himself. There\'s plenty to envision inside himself as well! New leadership at Langham, new ordination opportunities and life with thick-rimmed glasses. Despite all that visualization, he\'s still his same old self: curly hair that borders on mad scientist, relentless berating of his children with (groan) dad jokes, and extending church on Sunday by an hour with his socializing habits. *maybe add a more serious conclusion about somethings that are true to you?*',
           question1: 'What\'s your name and what are you up to?',
-          qa1: `Dad, Bart, Mr. Bart (to the preschoolers at church), the shot doctor (to no one). \n
+          qa1: `Dad, Bart, Mr. Bart (to the preschoolers at church), the shot doctor (to no one). <br><br> 
           Still doing marketing for Langham Partnership, teaching preschoolers 2x/month at church, rebounding jump shots at the JCC when called upon, watching a lot of college (Illinois Tech/Macalester) and high school soccer, AAU and high school basketball, and pizza-night shows.`,
           question2: 'What\'s the most 2024 thing to happen to you this year?',
           qa2: 'The Vikings got my hopes up...',
           question3: 'What are you proud of this year?',
-          qa3: `My kids + 
+          qa3: `My kids + <br>
           The 2024 Langham Advent devotional! `,
           question4: 'What\'s a skill you picked up or perfected this year?',
           qa4: `Accompanying children to surgeries and assisting them with recovery... `,
           rapidFire:[
             {question: 'WOTY?',
-          answer: `Word: Ordination <br>
+          answer: `Word: Ordination? <br>
           Woman: Carrie <br>
-          Wordle:`,},
+          Wordle: October 23, 2024 (my birthday), two guesses, word was "GOOFY"! `,},
             {question: 'SOTY?',
             answer: `Song: "Know That I Know" by Lake Street Dive <br>
             Sandwich: Homemade Cubano <br>
@@ -59,5 +59,5 @@ export default {
 </script>
 
 <style scoped>
-/* Styles specific to Abigail's page */
+
 </style>

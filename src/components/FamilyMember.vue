@@ -1,59 +1,88 @@
 <template>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 grid-flow-row p-0 md:p-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-0 grid-flow-row p-0 md:p-8">
+      <!-- 1. pfp -->
       <div class="justify-center flex items-center">
         <img :src="member.pfp" class=" mb-4 w-32 h-32 aspect-square object-cover rounded-full max-h-48 shadow-md">
        </div>
-      <!-- Bio or Description -->
-      <div class="sm:col-span-2 md:col-span-3 text-center">
+      <!--2.Name and bio-->
+      <div class="sm:col-span-2 md:col-span-2 text-center">
         <slot name="header">
           <h1 class="font-mono text-8xl text-center object-scale-down">{{ member.name }}</h1>
         </slot>
-        <p :class="`text-${member.pageColor}`" class="font-sans font-extrabold text-lg m-4">{{ member.bio }}</p>
+        <p :class="`text-${member.pageColor}`" class="font-serif tracking-wide text-justify text-md m-4">{{ member.bio }}</p>
       </div>
-      <!-- Main Questions -->
+      <!-- 3. Main Questions -->
       <div>
-        <ul class=" leading-6 text-center grid grid-cols-3 grid-flow-row gap-0">
-          <li class="text-start font-mono text-almond col-span-3" :class="`bg-${member.pageColor}`">
+        <ul class=" leading-6 text-center grid grid-cols-3 grid-flow-row gap-0" v-if="member.collageImages && member.collageImages.length">
+          <li class="text-start font-mono text-almond col-span-3" :class="`bg-${member.pageColor}`" >
+            <div class="w-full h-auto aspect-w-16 aspect-h-9 ">
+              <img
+                :src="member.collageImages[0]?.src" :alt="member.collageImages[0]?.alt"
+                class="object-cover z-50"
+              />
+            </div>
             <strong class="m-4 inline-block text-md whitespace-pre-line" >{{member.question1}}</strong>
              <br> 
-             <p class="m-4 mt-0 text-sm inline-block">{{ member.qa1 }}</p></li>
-          <li class="text-start font-mono bg-almond col-span-2" :class="`text-${member.pageColor}`">
+             <p v-html="member.qa1" class="m-4 mt-0 text-sm inline-block"></p></li>
+          <li class="text-start font-mono bg-almond col-span-3" :class="`text-${member.pageColor}`">
+            <!-- <div class="w-full h-auto aspect-w-16 aspect-h-9 ">
+              <img
+                :src="member.collageImages[1]?.src" :alt="member.collageImages[1]?.alt"
+                class="object-cover z-50"
+              />
+            </div> -->
             <strong class="m-4 inline-block text-md whitespace-pre-line">{{member.question2}}</strong> 
             <br>
-            <p class="m-4 mt-0 text-sm inline-block">{{ member.qa2 }}</p></li>
+            <p v-html="member.qa2" class="m-4 mt-0 text-sm inline-block"></p></li>
           <li class="text-start font-mono text-almond col-span-3" :class="`bg-${member.pageColor}`">
+            <!-- <div class="w-full h-auto aspect-w-16 aspect-h-9 ">
+              <img
+                :src="member.collageImages[2]?.src" :alt="member.collageImages[2]?.alt"
+                class="object-cover z-50"
+              />
+            </div> -->
           <strong class="m-4 inline-block text-md whitespace-pre-line" >{{member.question3}}</strong>
             <br> 
-            <p class="m-4 mt-0 text-sm inline-block">{{ member.qa3 }}</p></li>
-          <li class="text-start font-mono bg-almond col-span-2 col-start-2" :class="`text-${member.pageColor}`">
+            <p v-html="member.qa3" class="m-4 mt-0 text-sm inline-block"></p></li>
+          <li class="text-start font-mono bg-almond col-span-3 col-start-1" :class="`text-${member.pageColor}`">
+            <!-- <div class="w-full h-auto aspect-w-16 aspect-h-9 ">
+              <img
+                :src="member.collageImages[0]?.src" :alt="member.collageImages[0]?.alt"
+                class="object-cover z-50"
+              />
+            </div> -->
             <strong class="m-4 inline-block text-md whitespace-pre-line">{{member.question4}}</strong> 
             <br>
-            <p class="m-4 mt-0 text-sm inline-block">{{ member.qa4 }}</p></li>
+            <p v-html="member.qa4" class="m-4 mt-0 text-sm inline-block"></p></li>
         </ul>
       </div>
-      <!-- Rapid Fire Collage -->
-      <div class="grid grid-cols-1 gap-0 grid-flow-row pt-4">
+      <!-- Rapid Fire Accordian -->
+       <div>
+        <h2 class="font-mono text-4xl text-center object-scale-down p-4" :class="`text-${member.pageColor}`"> rapid fire! </h2>
+       </div>
+      <div class="grid grid-cols-1 gap-0 grid-flow-row mb-4">
         <div 
         v-for="(item, index) in member.rapidFire" 
         :key=index
-        class="shadow-md">
+        class="border-b-2 mx-4"
+        :class="`border-${member.pageColor} text-${member.pageColor}`">
         <!-- Accordian -->
         <div 
-        class="p-4 text-center group transition-all duration-300 cursor-pointer"
-        :class="index % 2 === 0 ? 'bg-dred text-almond' : 'bg-almond text-dred'"
+        class="p-2 text-center font-mono group transition-all duration-500 cursor-pointer  "
+        :class="index % 2 === 0 ? ` text-start` : `text-end`"
         @click="toggle(index)">
-          <div class="font-bold text-lg">
+          <div class=" text-lg">
               <p>{{ item.question }}</p>
           </div>
         </div>
-        <div v-if="activeIndex === index" class="transition-all duration-300 ">
-        <p v-html="item.answer" class="text-center font-sans" :class="index % 2 === 0 ? 'bg-dred text-almond' : 'bg-almond text-dred'"></p>
+        <div v-if="activeIndex === index" class="transition-all fade duration-700 align-center p-2 ">
+        <p v-html="item.answer" class="text-center font-serif tracking-wide" :class="index % 2 === 0 ? ` text-${member.pageColor} text-start` : ` text-${member.pageColor} text-end`"></p>
          </div>
         </div>
       </div>
       <!-- Footer -->
        <div>
-        <p class="text-center p-8 "><i>brought to you by @Moseman6 INC</i></p>
+        <p class="justify-center p-4 font-mono md:col-span-full text-almond flex" :class="`bg-${member.pageColor}`"><i>brought to you by @Moseman6 INC</i></p>
        </div>
     </div>
   </template>
@@ -66,6 +95,7 @@
     },
     mounted(){
       console.log(this.member.collageImages);
+      console.log(this.member)
     },
     data() {
     return {
