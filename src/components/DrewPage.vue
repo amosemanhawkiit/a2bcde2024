@@ -19,9 +19,9 @@
         drew: {
           name: 'drew',
           pageColor: 'bittersweet',
-          pfp: "/assetspub/track.jpg",
+          pfp: "/assetspub/drewpfp.jpg",
           collageImages: [
-          { src: "/assetspub/track.jpg", alt: "Bart at a game" },
+          { src: "/assetspub/drewgoalie.jpg", alt: "Bart at a game" },
           { src: "/assetspub/track.jpg", alt: "Bart with the kids" },
           { src: "/assetspub/track.jpg", alt: "Bart baking" },
           ], 

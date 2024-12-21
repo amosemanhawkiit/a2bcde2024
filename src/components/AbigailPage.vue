@@ -20,22 +20,24 @@
         abigail: {
           name: 'abigail',
           pageColor: 'lgreen',
-          pfp: "/assetspub/track.jpg",
+          pfp: "/assetspub/absbiking1.jpg",
           collageImages: [
-          { src: "/assetspub/track.jpg", alt: "Bart at a game" },
+          { src: "/assetspub/abshalfmarathon.jpg", alt: "Bart at a game" },
           { src: "/assetspub/track.jpg", alt: "Bart with the kids" },
           { src: "/assetspub/track.jpg", alt: "Bart baking" },
           ], 
           bio: '“Seasons” is a word that comes to mind for carrie for 2024. From basketball to track to following 3 different fall soccer seasons, her and Bart\'s time was shaped by these sports seasons-- and she loves watching and supporting from the sidelines. Seasons on the homefront are also ever changing. From having 1 kid at home to 3 and then back to 2 over the summer, the shifting dynamics keep her on her toes, and she cherishes all the moments that the whole crew gets to be together. ',
-          question1: 'What\'s your name and what are you up to?',
-          qa1: `Abigail, Abi, Gail, Abs <br> <br>
-          Lots of content prep + planning for the year, frantically trying to make cookie boxes for my coworkers, and teaching lots and lots of classes. `,
-          question2: 'What\'s the most 2024 thing to happen to you this year?',
-          qa2: 'Not being able to remember anything that happened this year... <br><br> 3 MORE major car issues, getting bullied/becoming a meme online as part of my job, moving into an apartment with crooked floors',
-          question3: 'What are you proud of this year?',
-          qa3: `Running a half marathon, getting promoted, taking a solo trip, starting a substack for the Everygirl `,
-          question4: 'What\'s a skill you picked up or perfected this year?',
-          qa4: `I really perfected my at home coffee recipe for both hot AND iced. Separate me and my nespresso at your own risk!`,
+          question: [
+          {q: 'What\'s your name and what are you up to?',
+          a: `Abigail, Abi, Gail, Abs <br> <br>
+          Lots of content prep + planning for the year, frantically trying to make cookie boxes for my coworkers, and teaching lots and lots of classes. `},
+          {q: 'What\'s the most 2024 thing to happen to you this year?',
+          a: 'Not being able to remember anything that happened this year... <br><br> 3 MORE major car issues, getting bullied/becoming a meme online as part of my job, moving into an apartment with crooked floors'},
+          {q: 'What are you proud of this year?',
+          a: `Running a half marathon, getting promoted, taking a solo trip, starting a substack for the Everygirl `,},
+          {q: 'What\'s a skill you picked up or perfected this year?',
+          a: `I really perfected my at home coffee recipe for both hot AND iced. Separate me and my nespresso at your own risk! `,}
+          ],
           rapidFire:[
             {question: 'WOTY?',
           answer: `definitely boxing (workout)`,},

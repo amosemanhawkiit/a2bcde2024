@@ -8,6 +8,7 @@ module.exports = defineConfig({
     experiments: {
       outputModule: true, // Enables Webpack support for ES Modules
     },},
+    publicPath: process.env.NODE_ENV === 'production' ? '/a2bcde2024/' : '/',
     // compilerOptions: {
     //   isCustomElement: (tag) => tag.startsWith('swiper-'),
     // },

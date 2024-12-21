@@ -19,9 +19,9 @@
         amelia: {
           name: 'amelia',
           pageColor: 'dred',
-          pfp: "/assetspub/track.jpg",
+          pfp: "/assetspub/ameliahalfbirthday.jpg",
           collageImages: [
-          { src: "/assetspub/track.jpg", alt: "Bart at a game" },
+          { src: "/assetspub/bagladycali.jpg", alt: "Bart at a game" },
           { src: "/assetspub/track.jpg", alt: "Bart with the kids" },
           { src: "/assetspub/track.jpg", alt: "Bart baking" },
           ], 

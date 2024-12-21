@@ -1,7 +1,7 @@
 <template>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-0 grid-flow-row p-0 md:p-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-0 grid-flow-row p-0 md:p-8 md:gap-2">
       <!-- 1. pfp -->
-      <div class="justify-center flex items-center">
+      <div class="justify-center flex md:col-span-2 items-center">
         <img :src="member.pfp" class=" mb-4 w-32 h-32 aspect-square object-cover rounded-full max-h-48 shadow-md">
        </div>
       <!--2.Name and bio-->
@@ -13,9 +13,9 @@
       </div>
       <!-- 3. Main Questions -->
       <div>
-        <ul class=" leading-6 text-center grid grid-cols-3 grid-flow-row gap-0" v-if="member.collageImages && member.collageImages.length">
+        <ul class=" leading-6 text-center grid grid-cols-3 grid-flow-row auto-rows-max gap-0 md:gap-y-2" v-if="member.collageImages && member.collageImages.length" >
           <li class="text-start font-mono text-almond col-span-3" :class="`bg-${member.pageColor}`" >
-            <div class="w-full h-auto aspect-w-16 aspect-h-9 ">
+            <div class="w-full h-auto aspect-w-16 aspect-h-9 md:hidden">
               <img
                 :src="member.collageImages[0]?.src" :alt="member.collageImages[0]?.alt"
                 class="object-cover z-50"
@@ -57,10 +57,16 @@
         </ul>
       </div>
       <!-- Rapid Fire Accordian -->
-       <div>
+       <!-- <div>
         <h2 class="font-mono text-4xl text-center object-scale-down p-4" :class="`text-${member.pageColor}`"> rapid fire! </h2>
-       </div>
-      <div class="grid grid-cols-1 gap-0 grid-flow-row mb-4">
+       </div> -->
+      <div class="grid grid-cols-1 gap-0 mb-4 md:mb-0">
+        <div class="w-full h-auto aspect-w-16 aspect-h-9 hidden md:block">
+              <img
+                :src="member.collageImages[0]?.src" :alt="member.collageImages[0]?.alt"
+                class="object-cover z-50"
+              /></div>
+        <h2 class="font-mono text-4xl text-center object-scale-down p-4 md:pt-4" :class="`text-${member.pageColor}`"> rapid fire! </h2>
         <div 
         v-for="(item, index) in member.rapidFire" 
         :key=index
@@ -81,8 +87,10 @@
         </div>
       </div>
       <!-- Footer -->
-       <div>
-        <p class="justify-center p-4 font-mono md:col-span-full text-almond flex" :class="`bg-${member.pageColor}`"><i>brought to you by @Moseman6 INC</i></p>
+       <div class="text-center md:col-span-2 md:pt-2">
+       <footer class="justify-center p-4 font-mono text-almond" :class="`bg-${member.pageColor}`">
+        <p  ><i>brought to you by @Moseman6 INC</i></p>
+       </footer>
        </div>
     </div>
   </template>

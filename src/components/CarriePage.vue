@@ -21,20 +21,21 @@
           pageColor: 'bittersweet',
           pfp: "/assetspub/track.jpg",
           collageImages: [
-          { src: "/assetspub/track.jpg", alt: "Bart at a game" },
+          { src: "/assetspub/momlaughing.jpg", alt: "Carrie laughing expressively" },
           { src: "/assetspub/track.jpg", alt: "Bart with the kids" },
           { src: "/assetspub/track.jpg", alt: "Bart baking" },
           ], 
           bio: '“Seasons” is a word that comes to mind for carrie for 2024. From basketball to track to following 3 different fall soccer seasons, her and Bart\'s time was shaped by these sports seasons-- and she loves watching and supporting from the sidelines. Seasons on the homefront are also ever changing. From having 1 kid at home to 3 and then back to 2 over the summer, the shifting dynamics keep her on her toes, and she cherishes all the moments that the whole crew gets to be together. ',
-          question1: 'What\'s your name and what are you up to?',
-          qa1: `Carrie, Mom, Care to select a few`,
-          question2: 'What\'s the most 2024 thing to happen to you this year?',
-          qa2: 'The Vikings got my hopes up...',
-          question3: 'What are you proud of this year?',
-          qa3: `My kids + <br>
-          The 2024 Langham Advent devotional! `,
-          question4: 'What\'s a skill you picked up or perfected this year?',
-          qa4: `Making granola!`,
+          question: [
+          {q: 'What\'s your name and what are you up to?',
+          a: `Carrie, Mom, Care to select a few`},
+          {q: 'What\'s the most 2024 thing to happen to you this year?',
+          a: 'The Vikings got my hopes up...',},
+          {q: 'What are you proud of this year?',
+          a: ` `,},
+          {q: 'What\'s a skill you picked up or perfected this year?',
+          a: `Making granola! `,}
+          ],
           rapidFire:[
             {question: 'WOTY?',
           answer: `Mountains (took solo trips to Asheville and Denver)`,},

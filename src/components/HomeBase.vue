@@ -60,6 +60,8 @@ export default {
         "/assetspub/emfair.jpg",
         "/assetspub/pickle.jpg",
         "/assetspub/track.jpg",
+        "/assetspub/familyhuddle1.jpg",
+        "/assetspub/sisterhug.jpg",
       ],
       isPaused: false,
       intervalID: null,

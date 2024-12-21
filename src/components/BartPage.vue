@@ -26,16 +26,18 @@ export default {
           { src: "/assetspub/urkillingmesmalls.jpg", alt: "Bart baking" },
           ], 
           bio: 'Bart spent much of his year ruminating and wondering about the future, as one does when they\'re 50+. With four children facing changes in career paths, sports, education, etc., there\'s plenty to envision aside himself. There\'s plenty to envision inside himself as well! New leadership at Langham, new ordination opportunities and life with thick-rimmed glasses. Despite all that visualization, he\'s still his same old self: curly hair that borders on mad scientist, relentless berating of his children with (groan) dad jokes, and extending church on Sunday by an hour with his socializing habits. *maybe add a more serious conclusion about somethings that are true to you?*',
-          question1: 'What\'s your name and what are you up to?',
-          qa1: `Dad, Bart, Mr. Bart (to the preschoolers at church), the shot doctor (to no one). <br><br> 
-          Still doing marketing for Langham Partnership, teaching preschoolers 2x/month at church, rebounding jump shots at the JCC when called upon, watching a lot of college (Illinois Tech/Macalester) and high school soccer, AAU and high school basketball, and pizza-night shows.`,
-          question2: 'What\'s the most 2024 thing to happen to you this year?',
-          qa2: 'The Vikings got my hopes up...',
-          question3: 'What are you proud of this year?',
-          qa3: `My kids + <br>
-          The 2024 Langham Advent devotional! `,
-          question4: 'What\'s a skill you picked up or perfected this year?',
-          qa4: `Accompanying children to surgeries and assisting them with recovery... `,
+          question: [
+          {q: 'What\'s your name and what are you up to?',
+          a: `Dad, Bart, Mr. Bart (to the preschoolers at church), the shot doctor (to no one). <br><br> 
+          Still doing marketing for Langham Partnership, teaching preschoolers 2x/month at church, rebounding jump shots at the JCC when called upon, watching a lot of college (Illinois Tech/Macalester) and high school soccer, AAU and high school basketball, and pizza-night shows.`},
+          {q: 'What\'s the most 2024 thing to happen to you this year?',
+          a: 'The Vikings got my hopes up...',},
+          {q: 'What are you proud of this year?',
+          a: `My kids + <br>
+          The 2024 Langham Advent devotional! `,},
+          {q: 'What\'s a skill you picked up or perfected this year?',
+          a: `Accompanying children to surgeries and assisting them with recovery... `,}
+          ],
           rapidFire:[
             {question: 'WOTY?',
           answer: `Word: Ordination? <br>

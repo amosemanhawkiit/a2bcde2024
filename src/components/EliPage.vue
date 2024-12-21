@@ -19,9 +19,9 @@
         eli: {
           name: 'eli',
           pageColor: 'dred',
-          pfp: "/assetspub/track.jpg",
+          pfp: "/assetspub/elipointfive.jpg",
           collageImages: [
-          { src: "/assetspub/track.jpg", alt: "Bart at a game" },
+          { src: "/assetspub/elipulley.jpeg", alt: "Eli on the court for howard pulley" },
           { src: "/assetspub/track.jpg", alt: "Bart with the kids" },
           { src: "/assetspub/track.jpg", alt: "Bart baking" },
           ], 

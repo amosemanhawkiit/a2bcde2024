@@ -11,13 +11,14 @@
       class="space-y-10 fixed top-0 right-0 z-50 h-screen w-full p-4 flex flex-col items-center justify-center bg-dred text-almond md:w-1/3"
       v-if="isSidebarOpen">
         <ul class="space-y-10 items-center text-center text-4xl font-mono">
-            <li><a href="#" @click.prevent="currentPage = 'A'; showSideNav = false" class="hover:text-bittersweet">A</a></li>
-            <li><a href="#" @click.prevent="currentPage = 'A2'; showSideNav = false" class="hover:text-bittersweet">A2</a></li>
-            <li><a href="#" @click.prevent="currentPage = 'B'; showSideNav = false" class="hover:text-bittersweet">B</a></li>
-            <li><a href="#" @click.prevent="currentPage = 'C'; showSideNav = false" class="hover:text-bittersweet">C</a></li>
-            <li><a href="#" @click.prevent="currentPage = 'D'; showSideNav = false" class="hover:text-bittersweet">D</a></li>
-            <li><a href="#" @click.prevent="currentPage = 'E'; showSideNav = false" class="hover:text-bittersweet">E</a></li>
-            <li><a href="#" @click.prevent="currentPage = 'Moseman'; showSideNav = false" class="hover:text-bittersweet">Moseman</a></li>
+            <li><a href="#" @click.prevent="currentPage = 'A'; isSidebarOpen = false" class="hover:text-bittersweet">A</a></li>
+            <li><a href="#" @click.prevent="currentPage = 'A2'; isSidebarOpen = false" class="hover:text-bittersweet">A2</a></li>
+            <li><a href="#" @click.prevent="currentPage = 'B'; isSidebarOpen = false" class="hover:text-bittersweet">B</a></li>
+            <li><a href="#" @click.prevent="currentPage = 'C'; isSidebarOpen = false" class="hover:text-bittersweet">C</a></li>
+            <li><a href="#" @click.prevent="currentPage = 'D'; isSidebarOpen = false" class="hover:text-bittersweet">D</a></li>
+            <li><a href="#" @click.prevent="currentPage = 'E'; isSidebarOpen = false" class="hover:text-bittersweet">E</a></li>
+            <li><a href="#" @click.prevent="currentPage = 'Moseman'; isSidebarOpen = false" class="hover:text-bittersweet">Moseman</a></li>
+            <li><a href="#" @click.prevent="currentPage = 'The End'; isSidebarOpen = false" class="hover:text-bittersweet">The End</a></li>
           </ul>
           <button class="fixed top-4 right-4 p-2 z-50 bg-almond text-dred rounded-md focus:outline-none" 
             @click="isSidebarOpen = !isSidebarOpen">
@@ -37,6 +38,7 @@
       <AmeliaPage v-if="currentPage === 'A2'" />
       <DrewPage v-if="currentPage === 'D'" />
       <EliPage v-if="currentPage === 'E'" />
+      <FinalPage v-if="currentPage=== 'The End'"/>
     </main>
     <div class="min-h-screen bg-gray-100 perspective-1000 overflow-y-auto">
       <swiper-container
@@ -88,13 +90,14 @@ import AbigailPage from './components/AbigailPage.vue';
 import AmeliaPage from './components/AmeliaPage.vue';
 import DrewPage from './components/DrewPage.vue';
 import EliPage from './components/EliPage.vue';
+import FinalPage from './components/FinalPage.vue';
 
 export default {
   data() {
     return {
       currentPage: 'Moseman', 
       isSidebarOpen: false,
-      pages: [markRaw(HomeBase), markRaw(BartPage), markRaw(CarriePage), markRaw(AbigailPage), markRaw(AmeliaPage), markRaw(DrewPage), markRaw(EliPage)],
+      pages: [markRaw(HomeBase), markRaw(BartPage), markRaw(CarriePage), markRaw(AbigailPage), markRaw(AmeliaPage), markRaw(DrewPage), markRaw(EliPage), markRaw(FinalPage)],
     };
   },
   watch: {
@@ -102,6 +105,8 @@ export default {
       // Close the sidebar whenever the page changes
       if (newValue !== oldValue) {
         this.isSidebarOpen = false;
+        this.currentPage = newValue;
+        console.log("currentPage changed to:", newValue);
       }
     },
   },
