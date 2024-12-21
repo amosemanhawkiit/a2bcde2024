@@ -19,11 +19,11 @@
         amelia: {
           name: 'amelia',
           pageColor: 'dred',
-          pfp: "/assetspub/ameliahalfbirthday.jpg",
+          pfp: "./assetspub/ameliahalfbirthday.jpg",
           collageImages: [
-          { src: "/assetspub/bagladycali.jpg", alt: "Bart at a game" },
-          { src: "/assetspub/track.jpg", alt: "Bart with the kids" },
-          { src: "/assetspub/track.jpg", alt: "Bart baking" },
+          { src: "./assetspub/bagladycali.jpg", alt: "Bart at a game" },
+          { src: "./assetspub/track.jpg", alt: "Bart with the kids" },
+          { src: "./assetspub/track.jpg", alt: "Bart baking" },
           ], 
           bio: '“Seasons” is a word that comes to mind for carrie for 2024. From basketball to track to following 3 different fall soccer seasons, her and Bart\'s time was shaped by these sports seasons-- and she loves watching and supporting from the sidelines. Seasons on the homefront are also ever changing. From having 1 kid at home to 3 and then back to 2 over the summer, the shifting dynamics keep her on her toes, and she cherishes all the moments that the whole crew gets to be together. ',
           question1: 'What\'s your name and what are you up to?',

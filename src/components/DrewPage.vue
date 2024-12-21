@@ -19,11 +19,11 @@
         drew: {
           name: 'drew',
           pageColor: 'bittersweet',
-          pfp: "/assetspub/drewpfp.jpg",
+          pfp: "./assetspub/drewpfp.jpg",
           collageImages: [
-          { src: "/assetspub/drewgoalie.jpg", alt: "Bart at a game" },
-          { src: "/assetspub/track.jpg", alt: "Bart with the kids" },
-          { src: "/assetspub/track.jpg", alt: "Bart baking" },
+          { src: "./assetspub/drewgoalie.jpg", alt: "Bart at a game" },
+          { src: "./assetspub/track.jpg", alt: "Bart with the kids" },
+          { src: "./assetspub/track.jpg", alt: "Bart baking" },
           ], 
           bio: `Man of few words but many strengths. `,
           question1: 'What\'s your name and what are you up to?',

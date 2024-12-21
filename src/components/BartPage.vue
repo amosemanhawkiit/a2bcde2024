@@ -19,11 +19,11 @@ export default {
       bart: {
           name: 'bart/dad',
           pageColor: 'dred',
-          pfp: "/assetspub/dadeligolf.jpg",
+          pfp: "./assetspub/dadeligolf.jpg",
           collageImages: [
-          { src: "/assetspub/dadquinn.jpg", alt: "Bart making a funny expression" },
-          { src: "/assetspub/dadeligolf.jpg", alt: "Bart with the kids" },
-          { src: "/assetspub/urkillingmesmalls.jpg", alt: "Bart baking" },
+          { src: "./assetspub/dadquinn.jpg", alt: "Bart making a funny expression" },
+          { src: "./assetspub/dadeligolf.jpg", alt: "Bart with the kids" },
+          { src: "./assetspub/urkillingmesmalls.jpg", alt: "Bart baking" },
           ], 
           bio: 'Bart spent much of his year ruminating and wondering about the future, as one does when they\'re 50+. With four children facing changes in career paths, sports, education, etc., there\'s plenty to envision aside himself. There\'s plenty to envision inside himself as well! New leadership at Langham, new ordination opportunities and life with thick-rimmed glasses. Despite all that visualization, he\'s still his same old self: curly hair that borders on mad scientist, relentless berating of his children with (groan) dad jokes, and extending church on Sunday by an hour with his socializing habits. *maybe add a more serious conclusion about somethings that are true to you?*',
           question: [
