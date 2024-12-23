@@ -31,8 +31,6 @@
           a: `Carrie, Mom, Care to select a few`},
           {q: 'What\'s the most 2024 thing to happen to you this year?',
           a: 'The Vikings got my hopes up...',},
-          {q: 'What are you proud of this year?',
-          a: ` `,},
           {q: 'What\'s a skill you picked up or perfected this year?',
           a: `Making granola! `,}
           ],

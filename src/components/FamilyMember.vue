@@ -13,6 +13,31 @@
       </div>
       <!-- 3. Main Questions -->
       <div>
+  <ul
+    class="leading-6 text-center grid grid-cols-3 grid-flow-row auto-rows-max gap-0 md:gap-y-2"
+    v-if="member.question && member.question.length"
+  >
+    <li
+      v-for="(item, index) in member.question.filter(q => q.a)"
+      :key="index"
+      class="text-start font-mono col-span-3"
+      :class="{
+        [`bg-${member.pageColor}`]: index % 2 === 0,
+        'bg-almond': index % 2 !== 0,
+        [`text-${member.pageColor}`]: index % 2 !== 0,
+        'text-almond': index % 2 === 0,
+      }"
+    >
+      <strong class="m-4 inline-block text-md whitespace-pre-line">
+        {{ item.q }}
+      </strong>
+      <br />
+      <p v-html="item.a" class="m-4 mt-0 text-sm inline-block"></p>
+    </li>
+  </ul>
+</div>
+
+      <!-- <div>
         <ul class=" leading-6 text-center grid grid-cols-3 grid-flow-row auto-rows-max gap-0 md:gap-y-2" v-if="member.collageImages && member.collageImages.length" >
           <li class="text-start font-mono text-almond col-span-3" :class="`bg-${member.pageColor}`" >
             <div class="w-full h-auto aspect-w-16 aspect-h-9 md:hidden">
@@ -24,38 +49,38 @@
             <strong class="m-4 inline-block text-md whitespace-pre-line" >{{member.question1}}</strong>
              <br> 
              <p v-html="member.qa1" class="m-4 mt-0 text-sm inline-block"></p></li>
-          <li class="text-start font-mono bg-almond col-span-3" :class="`text-${member.pageColor}`">
+          <li class="text-start font-mono bg-almond col-span-3" :class="`text-${member.pageColor}`"> -->
             <!-- <div class="w-full h-auto aspect-w-16 aspect-h-9 ">
               <img
                 :src="member.collageImages[1]?.src" :alt="member.collageImages[1]?.alt"
                 class="object-cover z-50"
               />
             </div> -->
-            <strong class="m-4 inline-block text-md whitespace-pre-line">{{member.question2}}</strong> 
+            <!-- <strong class="m-4 inline-block text-md whitespace-pre-line">{{member.question2}}</strong> 
             <br>
             <p v-html="member.qa2" class="m-4 mt-0 text-sm inline-block"></p></li>
-          <li class="text-start font-mono text-almond col-span-3" :class="`bg-${member.pageColor}`">
+          <li class="text-start font-mono text-almond col-span-3" :class="`bg-${member.pageColor}`"> -->
             <!-- <div class="w-full h-auto aspect-w-16 aspect-h-9 ">
               <img
                 :src="member.collageImages[2]?.src" :alt="member.collageImages[2]?.alt"
                 class="object-cover z-50"
               />
             </div> -->
-          <strong class="m-4 inline-block text-md whitespace-pre-line" >{{member.question3}}</strong>
+          <!-- <strong class="m-4 inline-block text-md whitespace-pre-line" >{{member.question3}}</strong>
             <br> 
             <p v-html="member.qa3" class="m-4 mt-0 text-sm inline-block"></p></li>
-          <li class="text-start font-mono bg-almond col-span-3 col-start-1" :class="`text-${member.pageColor}`">
+          <li class="text-start font-mono bg-almond col-span-3 col-start-1" :class="`text-${member.pageColor}`"> -->
             <!-- <div class="w-full h-auto aspect-w-16 aspect-h-9 ">
               <img
                 :src="member.collageImages[0]?.src" :alt="member.collageImages[0]?.alt"
                 class="object-cover z-50"
               />
             </div> -->
-            <strong class="m-4 inline-block text-md whitespace-pre-line">{{member.question4}}</strong> 
+            <!-- <strong class="m-4 inline-block text-md whitespace-pre-line">{{member.question4}}</strong> 
             <br>
             <p v-html="member.qa4" class="m-4 mt-0 text-sm inline-block"></p></li>
         </ul>
-      </div>
+      </div> -->
       <!-- Rapid Fire Accordian -->
        <!-- <div>
         <h2 class="font-mono text-4xl text-center object-scale-down p-4" :class="`text-${member.pageColor}`"> rapid fire! </h2>

@@ -40,7 +40,7 @@
       <EliPage v-if="currentPage === 'E'" />
       <FinalPage v-if="currentPage=== 'The End'"/>
     </main>
-    <div class="min-h-screen bg-gray-100 perspective-1000 overflow-y-auto">
+    <div class="min-h-screen bg-gray-100 perspective-1000">
       <swiper-container
         ref="swiper"
         slides-per-view="1"
@@ -126,5 +126,7 @@ export default {
 </script>
 
 <style scoped>
+* {-webkit-font-smoothing: antialiased; /* For Webkit browsers (Chrome, Safari, etc.) */
+  -moz-osx-font-smoothing: grayscale; }
 
 </style>

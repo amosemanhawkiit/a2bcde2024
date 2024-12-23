@@ -57,7 +57,6 @@ export default {
         "./assetspub/marz.jpg",
         "./assetspub/connies.jpg",
         "./assetspub/diner.jpg",
-        "./assetspub/emfair.jpg",
         "./assetspub/pickle.jpg",
         "./assetspub/track.jpg",
         "./assetspub/familyhuddle1.jpg",
