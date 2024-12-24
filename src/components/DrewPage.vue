@@ -19,21 +19,21 @@
         drew: {
           name: 'drew',
           pageColor: 'bittersweet',
-          pfp: "./assetspub/drewpfp.jpg",
+          pfp: "./assetspub/drewpfp.JPG",
           collageImages: [
           { src: "./assetspub/drewgoalie.jpg", alt: "Bart at a game" },
           { src: "./assetspub/track.jpg", alt: "Bart with the kids" },
           { src: "./assetspub/track.jpg", alt: "Bart baking" },
           ], 
-          bio: `Man of few words but many strengths. `,
-          question1: 'What\'s your name and what are you up to?',
-          qa1: `Drew, but many people refer to me as Moseman. I'm currently a sophomore, still part of the Macalester men's soccer team and all that involves, and grinding my way through organic chemistry and various biology classes to continue on my pre-medicine journey. `,
-          question2: 'What\'s the most 2024 thing to happen to you this year?',
-          qa2: 'The Vikings got my hopes up...',
-          question3: 'What are you proud of this year?',
-          qa3: `Getting my first minutes in an NCAA game, getting a house to live in junior year, applying to study abroad (adulting things) `,
-          question4: 'What\'s a skill you picked up or perfected this year?',
-          qa4: `One skill I picked up this year is the identification of mechanisms that use nucleophilic and electrophilic addition to create new molecules or different shaped molecules from pre-existing ones. It was one that took a lot of practice, and has definitely not been perfected, but I certainly picked up on how to get it done.`,
+          bio: `2024 felt a little like a “stepping stone” year for Drew. There were no big milestones, but much progress was made on his goals and aspirations. He completed his first year of college with flying colors, spent the summer working at Joy of the People for the second year in a row (as well as playing on their summer team), and continued his collegiate soccer career this fall at Macalester College. `,
+          question: [
+          {q: 'What\'s your name and what are you up to?',
+          a: `Drew, but many people refer to me as Moseman. I'm currently a sophomore, still part of the Macalester men's soccer team and all that involves, and grinding my way through organic chemistry and various biology classes to continue on my pre-medicine journey. `,},
+          {q: 'What are you proud of this year?',
+          a: `Getting my first minutes in an NCAA game, getting a house to live in junior year, applying to study abroad (adulting things) `},
+          {q: 'What\'s a skill you picked up or perfected this year?',
+          a: `One skill I picked up this year is the identification of mechanisms that use nucleophilic and electrophilic addition to create new molecules or different shaped molecules from pre-existing ones. It was one that took a lot of practice, and has definitely not been perfected, but I certainly picked up on how to get it done.`,}
+          ],
           rapidFire:[
             {question: 'WOTY?',
           answer: `Chicago trip for NACC Championship or Taylor's Falls trip with Anna and her Grandparents`,},

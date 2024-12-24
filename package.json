@@ -12,6 +12,8 @@
     "@headlessui/vue": "^1.7.23",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "core-js": "^3.8.3",
+    "email-js": "^2.0.3",
+    "emailjs-com": "^3.2.0",
     "swiper": "^11.1.15",
     "swiper-vue": "^0.0.12",
     "vue": "^3.5.13",

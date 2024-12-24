@@ -40,7 +40,7 @@
       <EliPage v-if="currentPage === 'E'" />
       <FinalPage v-if="currentPage=== 'The End'"/>
     </main>
-    <div class="min-h-screen bg-gray-100 perspective-1000">
+    <div class="min-h-screen bg-gray-100 overflow-y-hidden perspective-1000">
       <swiper-container
         ref="swiper"
         slides-per-view="1"

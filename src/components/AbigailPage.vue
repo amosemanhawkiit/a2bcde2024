@@ -26,7 +26,7 @@
           { src: "./assetspub/track.jpg", alt: "Bart with the kids" },
           { src: "./assetspub/track.jpg", alt: "Bart baking" },
           ], 
-          bio: '“Seasons” is a word that comes to mind for carrie for 2024. From basketball to track to following 3 different fall soccer seasons, her and Bart\'s time was shaped by these sports seasons-- and she loves watching and supporting from the sidelines. Seasons on the homefront are also ever changing. From having 1 kid at home to 3 and then back to 2 over the summer, the shifting dynamics keep her on her toes, and she cherishes all the moments that the whole crew gets to be together. ',
+          bio: `On the verge of turning 25 in the next year - some might say Abigail has been ahead of the curve on her quarter life crisis. From planning her first solo trip (spur of the moment mid-week no less), to running a half marathon… it's safe to say she's following the rubric. But par-for-the-course existential panic aside, it's been a pretty solid year. As the oldest child of the family, moving into her own apartment this summer brought new meaning to the words peace and quiet. She's still chronically online for a living but has gotten to write and create a bit more which has been a fun new challenge.  In addition to the usual classes, she's started coaching boxing and wow, it's been a good year to help people hit things safely! She looks forward to exiting the cocoon of her early twenties into a fully-developed-frontal-lobe butterfly and seeing what adventures this new year has in store.`,
           question: [
           {q: 'What\'s your name and what are you up to?',
           a: `Abigail, Abi, Gail, Abs <br> <br>

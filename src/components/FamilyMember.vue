@@ -9,9 +9,16 @@
         <slot name="header">
           <h1 class="font-mono text-8xl text-center object-scale-down">{{ member.name }}</h1>
         </slot>
-        <p :class="`text-${member.pageColor}`" class="font-serif tracking-wide text-justify text-md m-4">{{ member.bio }}</p>
+        <p :class="`text-${member.pageColor}`" class="font-serif tracking-wide text-justify text-md m-4" v-html="member.bio"></p>
       </div>
       <!-- 3. Main Questions -->
+      <div class="w-full h-auto aspect-w-16 aspect-h-9 md:hidden">
+              <img
+                :src="member.collageImages[0]?.src" :alt="member.collageImages[0]?.alt"
+                class="object-cover z-50"
+              />
+            </div>
+            
       <div>
   <ul
     class="leading-6 text-center grid grid-cols-3 grid-flow-row auto-rows-max gap-0 md:gap-y-2"
